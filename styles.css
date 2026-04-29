@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-header: #47f;
+    --bg-header-title: #ffffff;
+    --bg-main: #F4F6F8;
+    --bg-form: #FFFFFF;
+    --text-main: #1F2933;
+    --text-secondary: #6B7280;
+    --border-default: #D1D5DB;
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+    --focus: #93C5FD;
+    --error: #DC2626;
+    --error-bg: #FEE2E2;
+    --success: #16A34A;
+    --success-bg: #DCFCE7;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+body,div,form,label,input,header,h1,h2{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*------------------ HEADER SECTION  -------------------- */
+.header{
+    background-color: var(--bg-header);
+    text-align: center;
+    font-size: 15px;
+    color: var(--bg-header-title);
+}
+.header__title {
+    padding: 20px;
+}
+
+/*-------------------- MAIN SECTION --------------------------*/
+.main {
+    width: 100vw;
+    max-height: 100vh;
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #0008;
+    background-color: var(--bg-form);
+    margin: auto;
+    padding: 60px 30px;
+}
+
+.form__input-container {
+    padding: 10px;
+    width: 100%;
+    color: var(--text-secondary);
+}
+
+.form__title {
+    text-align: center;
+    padding-bottom: 30px;
+    color: var(--text-main);
+}
+
+label {
+    padding: 10px;
+}
+
+input:not([type="checkbox"]) {
+    width: 100%;
+}
+
+::placeholder {
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+input {
+    border: 2px solid var(--border-default);
+    border-radius: 12px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--focus);
+    transition: 0.2s ease;
+}
+
+.input-error {
+    border-color: var(--error);
+    background-color: var(--error-bg);
+}
+
+.input-success{
+    border-color: var(--success);
+    background-color: var(--success-bg);
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 0.8rem;
+    height: 16px;
+}
+
+input[type="submit"] {
+    padding: 6px;
+    background-color: var(--primary);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
